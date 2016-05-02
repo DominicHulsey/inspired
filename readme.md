@@ -23,7 +23,7 @@ It is your responsibility to render each piece of the data from the services out
 Requirements:
 - `5 points`: The data from the services are each rendered. Quote, Image, Weather, Todo 
 
-###Step 2 - Adding the functionality `Total Points: 12.5`
+###Step 2 - Adding the functionality `Total Points: 10`
 
 The todolist is perhaps on of the most important features of this application. You will need to provide the user a way to add items to a list to be monitored for tracking. The user should be able to add or remove items easily and for a small bonus the user should be able to indicate an items status if they don't want to remove the item.
 
