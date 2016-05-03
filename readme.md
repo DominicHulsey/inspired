@@ -42,7 +42,7 @@ Requirements:
 - `2.5 points`: On hover the quote should show the author of the quote
 - `2.5 points`: The image should be on large display with at least one other element positioned over the top of the image.  
 
-###BONUS - Preview the Songs `Total Points: 5`
+###BONUS - Watching Time Tick `Total Points: 5`
 Requirements: 
 - A clock should be rendered to the screen that updates each minute without a page refresh
 - Allow the user to set their name and have it save to localStorage
