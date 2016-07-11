@@ -4,11 +4,13 @@ Inspiration can be difficult to achieve. Keep track of your many important tasks
 
 ###The Setup
 
-This time around you are being thrown into a mix of several files and some basic structure. Take some time to look at the files. You will not be required to edit any of the code in any files that end in `service.js`
+This time around you are being thrown into a mix of several files and some basic structure. Take some time to look at the files. Remember services are used for getting and mainting the data integrity. Controllers are for manipulating the DOM.
 
-You will notice that the basic controllers and html structure has been setup for you. If you open your developer tools you will see a list of data that is coming to you from each service and is being passed to the appropriate controller. 
+You will notice that the basic controllers and html structure has been setup for you. You will be responsible to connect each of the controllers to their appropiate service. Every Service is a contstructor so be sure to invoke the service inside the controller and save it to a variable in the controller to gain access to the needed methods. Take a look at the weather controller for an example of newing up the services.
 
-Your goal will be to put all of this data together in a visually pleasing format as well as ensuring the functionality of the todolist. The `TodoService` already has a helper method for saving your todolist however the entire todolist must be passed to the service for the save to work. 
+Your goal will be to put all of the data gathered from the services together in a visually pleasing format as well as ensuring the functionality of a todo list. The `TodoService` already has a helper method for saving your todolist however the entire todolist must be passed to the service for the save to work. 
+
+Think about the update functions that each controller will need so its data can be rendered to the page. 
 
 Below you will see an image that you may use for inspiration. 
 
