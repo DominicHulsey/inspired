@@ -1,10 +1,15 @@
-app.controller('WeatherController', function(WeatherService){
+(function (){
+	
 	var wc = this;
-	WeatherService.getWeather().then(function(weather){
-		wc.weather = weather;
+	var weatherService = new WeatherService();
+	
+	weatherService.getWeather(function(weather){
+		console.log(weather);
+		//What can you do with this weather object?
 	})
-	// DO NOT EDIT ABOVE
 	
 	
 	
-})
+	
+	
+}())

@@ -1,4 +1,4 @@
-<html ng-app="inspire">
+<html>
 
 <head>
 	<meta charset="UTF-8">
@@ -6,23 +6,23 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body ng-controller="ImageController as ic">
-	<div ng-controller="WeatherController as wc">
+<body id="body">
+	<div id="weather">
 
 	</div>
 
-	<div ng-controller="QuoteController as qc">
+	<div id="quote">
 
 	</div>
 
-	<div ng-controller="TodoController as tc">
+	<div id="todo">
 
 	</div>
 
 
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="app/init.js"></script>
 	<script src="app/components/weather/weather-service.js"></script>
 	<script src="app/components/image/image-service.js"></script>
