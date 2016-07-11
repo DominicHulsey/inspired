@@ -1,8 +1,5 @@
-app.controller('ImageController', function(ImageService){
-	var ic = this;
-	ImageService.getImage().then(function(imageData){
-		ic.imageData = imageData;
-	})
-	// DO NOT EDIT ABOVE
+(function(){
 	
-})
+	//Your ImageService is a global constructor function what can you do here if you new it up?
+	
+}())
