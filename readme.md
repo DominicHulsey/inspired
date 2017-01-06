@@ -51,5 +51,11 @@ Requirements:
 - Change the message from Good Morning to Good Afternoon, Evening as appropriate. 
 - Allow the user to toggle the clock from, 12hr to military time. 
 
+###Challenge
+- Include an Icon to show what the weather is sunny/cloudy/rainy
+- Add a button to cycle to next quote/picture
+- Could you encorporate a deadline for some of the tasks
+- Add a settings so user can change to a new "theme" (font, background colors, etc.)
+
 ###Finished?
 When You are finished please slack the url for your github repo to me with in a DM.
