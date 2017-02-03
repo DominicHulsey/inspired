@@ -6,6 +6,14 @@
 	weatherService.getWeather(function(weather){
 		console.log(weather);
 		//What can you do with this weather object?
+
+		new Vue({
+			el: '#weather',
+			data:{
+				weather: weather
+			}
+		})
+
 	})
 	
 	
