@@ -6,7 +6,7 @@ Inspiration can be difficult to achieve. Keep track of your many important tasks
 
 This time around you are being thrown into a mix of several files and some basic structure. Take some time to look at the files. Remember services are used for getting and mainting the data integrity. Controllers are for manipulating the DOM.
 
-You will notice that the basic controllers and html structure has been setup for you. You will be responsible to connect each of the controllers to their appropiate service. Every Service is a contstructor so be sure to invoke the service inside the controller and save it to a variable in the controller to gain access to the needed methods. Take a look at the weather controller for an example of newing up the services.
+You will notice that the basic controllers and html structure has been setup for you. You will be responsible to connect each of the controllers to their appropiate service. Every Service is a contstructor so be sure to invoke the service inside the controller and save it to a variable in the controller to gain access to the needed methods. Take a look at the weather controller for an example of newing up the services. Also dont forget to instantiate your controllers and add them to the app object.
 
 Your goal will be to put all of the data gathered from the services together in a visually pleasing format as well as ensuring the functionality of a todo list. The `TodoService` already has a helper method for saving your todolist however the entire todolist must be passed to the service for the save to work. 
 
@@ -30,11 +30,11 @@ Requirements:
 The todolist is perhaps on of the most important features of this application. You will need to provide the user a way to add items to a list to be monitored for tracking. The user should be able to add or remove items easily and for a small bonus the user should be able to indicate an items status if they don't want to remove the item.
 
 Requirements: 
-- `2.5 points`: The todolist allows items to be added to a list
-- `2.5 points`: The todolist allows items to be removed from the list
-- `2.5 points`: The todolist takes advantage of the TodoService to provide persistant data through localStorage 
-- `1.25 points`: The todolist shows the total count of task currently being tracked
-- `1.25 points`: Clicking the weather should let the user toggle between Celsius and Fahrenheit display
+- `2 points`: The todolist allows items to be added to a list
+- `2 points`: The todolist allows items to be removed from the list
+- `2 points`: The todolist takes advantage of the TodoService to provide persistant data through localStorage 
+- `2 points`: The todolist shows the total count of task currently being tracked
+- `2 points`: Clicking the weather should let the user toggle between Celsius and Fahrenheit display
 
 ###Step 3 - Prettify `Total Points: 5`
 
