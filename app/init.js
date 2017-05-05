@@ -1,5 +1,5 @@
 var app = {
   controllers:{
-    weatherController: new WeatherController()
+    weatherController: new WeatherController(),
   }
 }
