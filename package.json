@@ -1,0 +1,24 @@
+{
+  "name": "inspire",
+  "version": "1.0.0",
+  "description": "Time to get inspired",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoiseCodeWorks/inspire.git"
+  },
+  "author": "Jake Overall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BoiseCodeWorks/inspire/issues"
+  },
+  "homepage": "https://github.com/BoiseCodeWorks/inspire#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.6"
+  }
+}
