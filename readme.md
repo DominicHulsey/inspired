@@ -63,7 +63,7 @@ Requirements:
 - Add a button to cycle to next quote/picture
 - Could you encorporate a deadline for some of the tasks
 - Add a settings so user can change to a new "theme" (font, background colors, etc.)
-- Clicking the weather should let the user toggle between Celsius and Fahrenheit display
+- Clicking the weather should let the user toggle between Celsius, Fahrenheit, or even Kelvin display
 
 ### Finished?
 When You are finished please slack the url for your github repo to me with in a DM.
