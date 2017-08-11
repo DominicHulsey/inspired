@@ -13,14 +13,14 @@ function TodoService() {
 				todoList = todos // <-- WHY IS THIS IMPORTANT????
 				draw(todoList) // <-- WHERE DOES THIS DRAW FUNCTION COME FROM???
 			})
-			.catch(logError)
+			.fail(logError)
 	}
 
 	this.addTodo = function (todo, getTodos) {
 		// WHAT IS THIS FOR???
 		$.post('/api/todos', todo)
 			.then(getTodos) // <-- DO NOT CHANGE THIS IT WORKS BUT DO YOU KNOW WHY?
-			.catch(logError)
+			.fail(logError)
 	}
 
 	this.toggleTodoStatus = function (todoId, getTodos) {
@@ -35,22 +35,20 @@ function TodoService() {
 			method: 'PUT',
 			contentType: 'application/json',
 			url: '/api/todos/' + todoId,
-			data: todo
+			data: JSON.stringify(todo)
 		})
 			.then((message) => {
 				//DO YOU WANT TO DO ANYTHING WITH THIS?
 				getTodos() // <-- LEAVE ME ALONE I WORK LIKE THIS
 			})
-			.fail(logError) // BECAUSE AJAX IS A UNIQUE SNOWFLAKE AND HAS TO BE DIFFERENT YOU CANT USE .catch
+			.fail(logError)
 	}
 
 	this.removeTodo = function () {
-		// Umm this one is on you.... It's also a unique snowflake the method is a DELETE
+		// Umm this one is on you to write.... It's also unique, the method is a DELETE
 		
 	}
 
 
-
-// I KNOW LOTS OF CODE RIGHT
 
 }
