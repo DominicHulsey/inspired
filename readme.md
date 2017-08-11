@@ -38,7 +38,7 @@ Requirements:
 
 ### Part 2 - Adding the functionality `Total Points: 15`
 
-The todolist is perhaps on of the most important features of this application. You will need to provide the user a way to add items to a list to be monitored for tracking. The user should be able to add or remove items easily and for a small bonus the user should be able to indicate an items status if they don't want to remove the item.
+The todolist is perhaps one of the most important features of this application. You will need to provide the user a way to add items to a list to be monitored for tracking. The user should be able to add or remove items easily and for a small bonus the user should be able to indicate an items status if they don't want to remove the item.
 
 Requirements: 
 - `2 points`: The todolist allows items to be added to a list
