@@ -29,44 +29,41 @@ This projects backend folder structure has been put in place for you. Your job o
 > Be Sure to `npm i` after forking and cloning
 
 
-### Part 1 -  Where is the output? `Total Points: 20`
+### Part 1 -  Where is the output?
 
 It is your responsibility to render each piece of the data from the services out to the screen. Look carefully at each controller to figure out the properties that will need to be used for visualization.
 
-Requirements:
-- `20 points`: The data from the services are each rendered. `5` Quote, `5` Image, `5` Weather, `5` Todo 
 
-### Part 2 - Adding the functionality `Total Points: 15`
+### Part 2 - Adding the functionality 
 
 The todolist is perhaps one of the most important features of this application. You will need to provide the user a way to add items to a list to be monitored for tracking. The user should be able to add or remove items easily and for a small bonus the user should be able to indicate an items status if they don't want to remove the item.
 
-Requirements: 
-- `2 points`: The todolist allows items to be added to a list
-- `2 points`: The todolist allows items to be removed from the list
-- `1 points`: The todolist shows the total count of tasks currently being tracked
-- `10 points`: The todolist takes advantage of the TodoService to provide persistent data through your Node Server
 
-### Part 3 - Prettify `Total Points: 5`
+### Part 3 - Prettify
 
 The positioning of elements on the page is not the absolute most crucial thing for this application however it does need to have few things to make the grade. Use the picture above as an idea for laying out your site.
+  
 
-Requirements:
-- `2.5 points`: On hover the quote should show the author of the quote and disappear when not hovered over
-- `2.5 points`: The image should be on large display with at least one other element positioned over the top of the image.  
-
-### BONUS - Watching Time Tick `Total Points: 5`
-Requirements: 
+### EXTENSION IDEAS 
+- On hover the quote should show the author of the quote and disappear when not hovered over
 - A clock should be rendered to the screen that updates each minute without a page refresh
 - Allow the user to set their name and have it save to localStorage
 - Change the message from Good Morning to Good Afternoon, Evening as appropriate. 
 - Allow the user to toggle the clock from, 12hr to military time. 
-
-### Challenge (Just for Fun **NO EXTRA POINTS**)
 - Include an Icon to show what the weather is sunny/cloudy/rainy
 - Add a button to cycle to next quote/picture
 - Could you encorporate a deadline for some of the tasks
 - Add a settings so user can change to a new "theme" (font, background colors, etc.)
 - Clicking the weather should let the user toggle between Celsius, Fahrenheit, or even Kelvin display
 
+## REQUIREMENTS:
+ - Visualization
+   - The data from the services are each rendered. Quote, Image, Weather, Todo
+   - The image should be on large display with at least one other element positioned over the top of the image.
+ - Functionality
+    - The todolist allows items to be added and removed from a list
+    - The todolist shows the total count of tasks currently being tracked
+    - The todolist takes advantage of the TodoService to provide persistent data through a Node Server
+
 ### Finished?
-When You are finished please slack the url for your github repo to me with in a DM.
+When You are finished please 
