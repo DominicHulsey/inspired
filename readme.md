@@ -20,15 +20,6 @@ Below you will see an image that you may use for inspiration.
     <img class="img-responsive" src="https://bcw.blob.core.windows.net/public/img/inspire.jpg"/>
 </div>
 
-
-##### Back-End
-
-This projects backend folder structure has been put in place for you. Your job on the backend is to get your express server started, create a connection to your own mlab database, and put together a `Model` (schema/router)  to manage a short todo list.
-
-
-> Be Sure to `npm i` after forking and cloning
-
-
 ### Part 1 -  Where is the output?
 
 It is your responsibility to render each piece of the data from the services out to the screen. Look carefully at each controller to figure out the properties that will need to be used for visualization.
