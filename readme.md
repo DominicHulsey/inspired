@@ -24,6 +24,43 @@ Below you will see an image that you may use for inspiration.
 
 It is your responsibility to render each piece of the data from the services out to the screen. Look carefully at each controller to figure out the properties that will need to be used for visualization.
 
+## The API
+
+### Todo model
+```javascript
+{
+    description: { type: String, required: true},      //has to be a string
+    completed: { type: Boolean, required: true},       //the server will do this for you
+    user: { type: String }                             //the server will do this for you
+}
+```
+
+### Post Request Method
+
+#### Create Todo
+https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos - new todo object as data for request
+
+
+### Get Request Method
+
+#### Get One Todo
+https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/:todoId - no data passed for request
+
+#### Get Entire Todo List 
+https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos - no data passed for request
+
+
+### Put Request Method
+
+#### Edit Todo
+https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/:todoId - edited todo object as data for request
+
+
+### Delete Request Method
+
+#### Delete Todo
+https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/:todoId - no data passed for request
+
 
 ### Part 2 - Adding the functionality 
 
