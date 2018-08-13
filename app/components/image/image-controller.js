@@ -1,6 +1,8 @@
-function ImageController() {
-	//Your ImageService is a global constructor function what can you do here if you new it up?
+//Your ImageService is a global class what can you do here to instantiate it?
+
+
+export default class ImageController {
+
 
 }
-
 

@@ -1,53 +1,50 @@
-function TodoService() {
-	// A local copy of your todos
-	var todoList = []
-	var baseUrl = 'https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos'
 
-	function logError(err) {
-		console.error('UMM SOMETHING BROKE: ', err)
-		//CAN YOU NOTIFY THE USER IF SOMETHING BREAKS? 
-		//do this without breaking the controller/service responsibilities
-	}
+let todoList = []
+let baseUrl = 'https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/'
 
-	this.getTodos = function (draw) {
-		$.get(baseUrl)
+const todoApi = axios.create({
+	baseURL: apiUrl,
+	timeout: 3000
+});
+
+
+
+export default class TodoService {
+
+	getTodos(draw) {
+		todoApi.get('')
 			.then(function (res) { // <-- WHY IS THIS IMPORTANT????
-				
+
 			})
 			.fail(logError)
 	}
 
-	this.addTodo = function (todo) {
+	addTodo(todo) {
 		// WHAT IS THIS FOR???
-		$.post(baseUrl, todo)
-			.then(function(res){ // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO?
-				
-			}) 
+		todoApi.post('', todo)
+			.then(function (res) { // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO?
+
+			})
 			.fail(logError)
 	}
 
-	this.toggleTodoStatus = function (todoId) {
+	toggleTodoStatus(todoId) {
 		// MAKE SURE WE THINK THIS ONE THROUGH
 		//STEP 1: Find the todo by its index **HINT** todoList
 
-		//STEP 2: Change the completed flag to the opposite of what is is **HINT** todo.completed = !todo.completed
+		var todo = {} ///MODIFY THIS LINE
 
-		//STEP 3: Here is that weird Ajax request because $.put doesn't exist
-		$.ajax({
-			method: 'PUT',
-			contentType: 'application/json',
-			url: baseUrl + '/' + todoId,
-			data: JSON.stringify(YOURTODOVARIABLEHERE)
-		})
+		//STEP 2: Change the completed flag to the opposite of what is is **HINT** todo.completed = !todo.completed
+		todoApi.put(todoId, todo)
 			.then(function (res) {
 				//DO YOU WANT TO DO ANYTHING WITH THIS?
 			})
 			.fail(logError)
 	}
 
-	this.removeTodo = function () {
-		// Umm this one is on you to write.... It's also unique, like the ajax call above. The method is a DELETE
-		
+	removeTodo() {
+		// Umm this one is on you to write.... The method is a DELETE
+
 	}
 
 }

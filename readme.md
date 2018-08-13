@@ -8,7 +8,7 @@ Inspiration can be difficult to achieve. Keep track of your many important tasks
 ##### Front-End
 This time around you are being thrown into a mix of several files and some basic structure. Take some time to look at the files. Remember services are used for getting and mainting the data integrity. Controllers are for manipulating the DOM.
 
-You will notice that the basic controllers and html structure has been setup for you. You will be responsible to connect each of the controllers to their appropiate service. Every Service is a constructor so be sure to invoke the service inside the controller and save it to a variable in the controller to gain access to the needed methods. Take a look at the weather controller for an example of newing up the services. Also don't forget to instantiate your controllers and add them to the app object.
+You will notice that the basic controllers and html structure has been setup for you. You will be responsible to connect each of the controllers to their appropiate service. Every Service is a class so be sure to invoke the service inside the controller and save it to a variable in the controller to gain access to the needed methods. Take a look at the weather controller for an example of newing up the services. Also don't forget to instantiate your controllers and add them to the app object.
 
 Your goal will be to put all of the data gathered from the services together in a visually pleasing format as well as ensuring the functionality of a todo list. 
 

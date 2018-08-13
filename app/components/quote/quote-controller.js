@@ -1,8 +1,13 @@
-function QuoteController(){
 
-	var qs = new QuoteService()
+let qs = new QuoteService()
 
-	qs.getQuote(function(quote){
-		console.log('What is the quote', quote)
-	})
+
+export default class QuoteController {
+
+
+	getQuote() {
+		qs.getQuote(function (quote) {
+			console.log('What is the quote', quote)
+		})
+	}
 }
