@@ -13,7 +13,7 @@ const quoteApi = axios.create({
 export default class QuoteService {
 	getQuote(callWhenDone) {
 		console.log('looking for some good quotes')
-		quoteApi.get('').then((res) => {
+		quoteApi().then((res) => {
 			callWhenDone(res.data)
 		})
 	}
