@@ -1,22 +1,26 @@
 
-let todoList = []
-let baseUrl = 'https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/'
 
 const todoApi = axios.create({
-	baseURL: apiUrl,
+	baseURL: 'https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/',
 	timeout: 3000
 });
 
+function logError(e) {
+	console.log(e)
+}
 
+
+let todoList = []
 
 export default class TodoService {
 
 	getTodos(draw) {
+		console.log("Getting the Todo List")
 		todoApi.get('')
-			.then(function (res) { // <-- WHY IS THIS IMPORTANT????
+			.then((res) => { // <-- WHY IS THIS IMPORTANT????
 
 			})
-			.fail(logError)
+			.catch(logError)
 	}
 
 	addTodo(todo) {
@@ -25,7 +29,7 @@ export default class TodoService {
 			.then(function (res) { // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO?
 
 			})
-			.fail(logError)
+			.catch(logError)
 	}
 
 	toggleTodoStatus(todoId) {
@@ -39,7 +43,7 @@ export default class TodoService {
 			.then(function (res) {
 				//DO YOU WANT TO DO ANYTHING WITH THIS?
 			})
-			.fail(logError)
+			.catch(logError)
 	}
 
 	removeTodo() {

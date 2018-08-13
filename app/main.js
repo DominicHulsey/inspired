@@ -9,4 +9,4 @@ class app {
   }
 }
 
-window.app = new app()
+window.app = new app()  
