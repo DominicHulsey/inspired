@@ -86,12 +86,17 @@ The positioning of elements on the page is not the absolute most crucial thing f
 
 ## REQUIREMENTS:
  - Visualization
-   - The data from the services are each rendered. Quote, Image, Weather, Todo
+   - The data from the services are each rendered. 
+        - Quote (quote and author)
+        - Image (only the image is required, however feel free to include other data)
+        - Weather (The temp is displayed, feel free to add other pieces)
+        - Todo (the new todo form exists, and any todos are rendered *GET*)
    - The image should be on large display with at least one other element positioned over the top of the image.
  - Functionality
-    - The todolist allows items to be added and removed from a list
+    - Todo's can be added to a list (POST)
+    - Todo's can be removed (DELETE)
+    - Todo's can be marked complete (PUT)
     - The todolist shows the total count of tasks currently being tracked
-    - The todolist takes advantage of the TodoService to provide persistent data through a Node Server
-
+    - The todolist takes advantage of the TodoService to provide persistent data
 ### Finished?
 When You are finished please submit the link to the project in the backpack
