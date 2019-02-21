@@ -1,54 +1,64 @@
-
-
+// @ts-ignore
 const todoApi = axios.create({
-	baseURL: 'https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos/',
+	baseURL: 'https://bcw-sandbox.herokuapp.com/api/jake/todos/',
 	timeout: 3000
 });
 
-function logError(e) {
-	console.log(e)
+let _state = {
+	todos: [],
+	error: {},
+}
+let _subscribers = {
+	todos: [],
+	error: []
 }
 
-
-let todoList = []
+function _setState(prop, data) {
+	_state[prop] = data
+	_subscribers[prop].forEach(fn => fn())
+}
 
 export default class TodoService {
+	get TodoError() {
+		return _state.error
+	}
 
-	getTodos(draw) {
+	addSubscriber(prop, fn) {
+		_subscribers[prop].push(fn)
+	}
+
+	getTodos() {
 		console.log("Getting the Todo List")
-		todoApi.get('')
-			.then((res) => { // <-- WHY IS THIS IMPORTANT????
-
+		todoApi.get()
+			.then(res => {
+				// WHAT DO YOU DO WITH THE RESPONSE?
 			})
-			.catch(logError)
+			.catch(err => _setState('error', err.response.data))
 	}
 
 	addTodo(todo) {
-		// WHAT IS THIS FOR???
 		todoApi.post('', todo)
-			.then(function (res) { // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO?
-
+			.then(res => {
+				// WHAT DO YOU DO AFTER CREATING A NEW TODO?
 			})
-			.catch(logError)
+			.catch(err => _setState('error', err.response.data))
 	}
 
 	toggleTodoStatus(todoId) {
-		// MAKE SURE WE THINK THIS ONE THROUGH
-		//STEP 1: Find the todo by its index **HINT** todoList
+		let todo = _state.todos.find(todo => todo._id == todoId)
+		// Be sure to change the completed property to its opposite
+		// todo.completed = !todo.completed <-- THIS FLIPS A BOOL
 
-		var todo = {} ///MODIFY THIS LINE
-
-		//STEP 2: Change the completed flag to the opposite of what is is **HINT** todo.completed = !todo.completed
 		todoApi.put(todoId, todo)
-			.then(function (res) {
+			.then(res => {
 				//DO YOU WANT TO DO ANYTHING WITH THIS?
 			})
-			.catch(logError)
+			.catch(err => _setState('error', err.response.data))
 	}
 
-	removeTodo() {
-		// Umm this one is on you to write.... The method is a DELETE
-
+	removeTodo(todoId) {
+		// This one is on you to write.... 
+		// The http method is delete at the todoId
 	}
 
 }

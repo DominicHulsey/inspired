@@ -1,12 +1,14 @@
 import WeatherController from "./components/weather/weather-controller.js";
+import TodoController from "./components/todo/todo-controller.js";
 
 // HEY WHERE ARE ALL OF YOUR CONTROLLERS??
-class app {
+class App {
   constructor() {
     this.controllers = {
-      weatherController: new WeatherController()
+      weatherController: new WeatherController(),
+      todoController: new TodoController()
     }
   }
 }
 
-window.app = new app()  
+window['app'] = new App()  

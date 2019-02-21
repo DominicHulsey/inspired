@@ -1,5 +1,6 @@
-//Your ImageService is a global class what can you do here to instantiate it?
+import ImageService from "./image-service.js";
 
+const _is = new ImageService()
 
 export default class ImageController {
 
