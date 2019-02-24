@@ -4,6 +4,7 @@ let _qs = new QuoteService()
 
 function drawQuote() {
   let quote = _qs.quotes
+  // @ts-ignore
   document.getElementById('quote').innerHTML = quote.getTemplate()
 }
 
