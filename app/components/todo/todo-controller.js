@@ -22,6 +22,7 @@ export default class TodoController {
 		_todoService.addSubscriber('error', _drawError)
 		_todoService.addSubscriber('todos', _drawTodos)
 		_todoService.getTodos()
+		_todoService.addTime()
 		//_todoService.showTasks()
 	}
 

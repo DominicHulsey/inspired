@@ -10,11 +10,16 @@ body{
   background-position: center;
 }
 #taskCard {
-  transition:all 0.4s linear;
+  transition:all 0.2s linear;
+}
+
+
+.mainText {
+  font-size: 10vh
 }
 
 #taskCard:hover {
-  transform:scale(1.1)
+  transform:scale(1.025)
 }
 
 .quote {
@@ -23,7 +28,7 @@ body{
 
 .weatherLogo {
   display: block;
-  width: 70%;
+  width: 50%;
   height: auto;
 }
 
