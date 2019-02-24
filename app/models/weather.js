@@ -8,11 +8,29 @@ export default class Weather {
     // You should probably convert the temperature data to either F or C
     this.city = data.name
     this.temperature = ((9 / 5) * (data.main.temp - 273) + 32).toFixed(0)
-  }
+    this.hourImg = hour()
 
+    function hour() {
+      let d = new Date
+      let hour = d.getHours()
+      if (hour <= 8 || hour >= 20) {
+        return `assets/moon.png`
+      }
+      else if (hour <= 16) {
+        return `assets/sun.png`
+      }
+      else if (hour > 16 || hour < 20) {
+        return `assets/sunSet.png`
+      }
+    }
+  }
   getTemplate() {
-    return `<h4 class="quote">${this.city}</h4>
-<h4 class="quote">${this.temperature}°</h4`
+    return `
+    <div class="col-3">
+<h3 class="quote" id="back">${this.city}<hr> ${this.temperature}°</h3></div>
+<div class="col-9">
+<img class="weatherLogo" src="${this.hourImg}" /></div>
+`
   }
 
 }

@@ -13,16 +13,18 @@ body{
   transition:all 0.4s linear;
 }
 
-#weather {
-  filter: blur(5px)
-}
-
 #taskCard:hover {
   transform:scale(1.1)
 }
 
 .quote {
   text-shadow: 2px 2px 5px  black;
+}
+
+.weatherLogo {
+  display: block;
+  width: 70%;
+  height: auto;
 }
 
 #taskWindow {

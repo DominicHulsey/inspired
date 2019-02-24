@@ -25,6 +25,19 @@ export default class TodoService {
 		return _state.error
 	}
 
+	taskComplete() {
+		document.getElementById('blankCheckbox').onclick = function () {
+			let clicked = true
+			if (clicked == true) {
+				todoApi.post('completed', true)
+					.then(res => {
+						console.log(res.data)
+					})
+			}
+		}
+
+	}
+
 	get todos() {
 		return _state.todos
 	}
@@ -47,18 +60,16 @@ export default class TodoService {
 		todoApi.post('', todo)
 			.then(res => {
 				this.getTodos()
+				console.log(res.data)
 			})
 			.catch(err => _setState('error', err.response.data))
 	}
 
 	toggleTodoStatus(todoId) {
-		let todo = _state.todos.find(todo => todo._id == todoId)
-		// Be sure to change the completed property to its opposite
-		// todo.completed = !todo.completed <-- THIS FLIPS A BOOL
-
+		let todo = _state.todos.find(todo => todo.id == todoId)
+		todo.status = !todo.status
 		todoApi.put(todoId, todo)
 			.then(res => {
-				//DO YOU WANT TO DO ANYTHING WITH THIS?
 			})
 			.catch(err => _setState('error', err.response.data))
 	}
