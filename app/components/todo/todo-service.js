@@ -1,6 +1,8 @@
+import ToDo from "../../models/todo.js";
+
 // @ts-ignore
 const todoApi = axios.create({
-	baseURL: 'https://bcw-sandbox.herokuapp.com/api/jake/todos/',
+	baseURL: 'https://bcw-sandbox.herokuapp.com/api/dom/todos/',
 	timeout: 3000
 });
 
@@ -23,14 +25,19 @@ export default class TodoService {
 		return _state.error
 	}
 
+	get todos() {
+		return _state.todos
+	}
+
 	addSubscriber(prop, fn) {
 		_subscribers[prop].push(fn)
 	}
 
 	getTodos() {
-		console.log("Getting the Todo List")
 		todoApi.get()
 			.then(res => {
+				let data = res.data.data.map(d => new ToDo(d))
+				_setState('todos', data)
 				// WHAT DO YOU DO WITH THE RESPONSE?
 			})
 			.catch(err => _setState('error', err.response.data))
@@ -39,7 +46,7 @@ export default class TodoService {
 	addTodo(todo) {
 		todoApi.post('', todo)
 			.then(res => {
-				// WHAT DO YOU DO AFTER CREATING A NEW TODO?
+				this.getTodos()
 			})
 			.catch(err => _setState('error', err.response.data))
 	}
@@ -57,6 +64,10 @@ export default class TodoService {
 	}
 
 	removeTodo(todoId) {
+		todoApi.delete(todoId)
+			.then(res => {
+				this.getTodos()
+			})
 		// This one is on you to write.... 
 		// The http method is delete at the todoId
 	}

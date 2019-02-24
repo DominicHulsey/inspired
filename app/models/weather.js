@@ -7,6 +7,12 @@ export default class Weather {
     // data.main.temp is the temperature in Kelvin
     // You should probably convert the temperature data to either F or C
     this.city = data.name
-    this.kelvin = data.main.temp
+    this.temperature = ((9 / 5) * (data.main.temp - 273) + 32).toFixed(0)
   }
+
+  getTemplate() {
+    return `<h4 class="quote">${this.city}</h4>
+<h4 class="quote">${this.temperature}°</h4`
+  }
+
 }

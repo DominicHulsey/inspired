@@ -2,3 +2,32 @@
   color: red;
   font-size: 2em;
 }
+body{
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height:100vh;
+  width: auto;
+  background-position: center;
+}
+#taskCard {
+  transition:all 0.4s linear;
+}
+
+#weather {
+  filter: blur(5px)
+}
+
+#taskCard:hover {
+  transform:scale(1.1)
+}
+
+.quote {
+  text-shadow: 2px 2px 5px  black;
+}
+
+#taskWindow {
+  height:60vh;
+}
+#hide {
+  border-bottom: 2px solid #525c67;
+}

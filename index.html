@@ -6,27 +6,70 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Inspire</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image">
-	<div id="weather">
-		Your Weather Template
-	</div>
+<body>
 
-	<div id="quote">
-		The Quote
-	</div>
+	<div class="container-fluid" id="bg-image">
 
-	<div>
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
+		<div class="row text-center mt-5">
+			<div class="text-white col-12 quote" id="quote">
+				The Quote
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<div class="text-white quote card bg-transparent" id="weather">
+					Your Weather Template
+				</div>
+			</div>
+		</div>
+		<div class="row fixed-bottom" id="taskWindow">
+			<div class="col-4 offset-7 bg-dark rounded py-2 h-100">
+				<div class="text-white align-items-center" id="toggleTasks">
+					<h3 class="text-white text-center"><i class="fas fa-angle-double-up"></i> View Tasks <i
+							class="fas fa-angle-double-up"></i></h3>
+				</div>
+				<div class="text-white align-items-center" id="todo">
+					<div id="todo-error"></div>
+					<form class="d-flex justify-content-center" onsubmit="app.controllers.todoController.addTodo(event)">
+						<input class="my-2" type="text" name="taskName" placeholder="type task here"></input>
+						<button class="my-2" type="submit" value="Submit">Create Task</button>
+					</form>
+					<div id="todos"></div>
+				</div>
+			</div>
+		</div>
 	</div>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-	<script type="module" src="app/main.js"></script>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.velocity/0.11.9/jquery.velocity.min.js"></script>
+	<script> $(document).ready(function () {
+			$('#taskWindow').height('6vh')
+			let displayed = false;
+			$('#toggleTasks').click(function () {
+				if (displayed == false) {
+					$("#taskWindow").animate({ height: "60vh" }, { queue: false, duration: 500 });
+					$("#toggleTasks").html('<h3 class="text-white text-center"><i class="fas fa-angle-double-down"></i> Hide <i class="fas fa-angle-double-down"></i></h3>')
+					displayed = true;
+				}
+				else {
+					$("#taskWindow").animate({ height: "6vh" }, { queue: false, duration: 500 })
+					$("#toggleTasks").html('<h3 class="text-white text-center"><i class="fas fa-angle-double-up"></i> View Tasks <i class="fas fa-angle-double-up"></i></h3>')
+					displayed = false;
+				}
+			})
+		})
+	</script>
+	<script src=" https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"> </script>
+	<script type="module" src="app/main.js">
+	</script>
 </body>
 
 </html>
