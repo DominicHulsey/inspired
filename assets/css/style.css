@@ -2,6 +2,24 @@
   color: red;
   font-size: 2em;
 }
+
+hr {
+  background-color: #59636d;
+  padding: 0px;
+}
+
+#margin {
+  margin-top: 30vh;
+}
+
+.main {
+  position: absolute
+  
+}
+
+.complete {
+  text-decoration: line-through;
+}
 body{
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,6 +31,9 @@ body{
   transition:all 0.2s linear;
 }
 
+#time {
+  font-size: 15vh
+}
 
 .mainText {
   font-size: 10vh
@@ -24,6 +45,7 @@ body{
 
 .quote {
   text-shadow: 2px 2px 5px  black;
+  height: 4vh;
 }
 
 .weatherLogo {

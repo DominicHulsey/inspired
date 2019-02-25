@@ -5,6 +5,6 @@ export default class Quote {
   }
 
   getTemplate() {
-    return `<h3 class="quote">"${this.quote}"</h3>`
+    return `<h5 class="quote"><i>${this.quote}</i></h5>`
   }
 }

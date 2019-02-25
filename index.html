@@ -15,24 +15,21 @@
 
 <body>
 
-	<div class="container-fluid" id="bg-image">
-		<div class="row text-center mt-5">
-			<div class="text-white col-12 quote" id="quote">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-4 h-100 d-flex">
-				<div
-					class="text-white quote card bg-transparent mt-5 d-flex flex-row p-1 align-items-center h-100 justify-content-center"
-					id="weather">
+	<div class="container-fluid h-100" id="bg-image">
+		<div class="row mt-3">
+			<div class="col-2 h-100 d-flex">
+				<div class="text-white quote card bg-transparent h-100" id="weather" style="border:none">
 				</div>
 			</div>
+			<div class="text-white col-8 quote text-center" id="quote">
+			</div>
 		</div>
-		<div class="row">
-			<div class="col-12 d-flex flex-column justify-content-center">
-				<h1 class="text-white quote text-center" id="name"></h1>
-				<hr>
-				<h1 class="text-white quote text-center" id="time"></h1>
+		<div class="row h-100 align-items-center" id="margin">
+			<div
+				class="col-4 h-auto border rounded bg-transparent main offset-4 d-flex flex-column justify-content-center align-items-center">
+				<h1 class="text-white quote text-center h-25" id="name"></h1>
+				<h1 class="text-white quote text-center h-50" id="time"></h1>
+				<h1 class="text-white quote text-center h-25" id="taskCount"></h1>
 			</div>
 		</div>
 		<div class="row fixed-bottom" id="taskWindow">
@@ -41,12 +38,15 @@
 					<h3 class="text-white text-center"><i class="fas fa-angle-double-up"></i> View Tasks <i
 							class="fas fa-angle-double-up"></i></h3>
 				</div>
+
+				<!--FORM-->
 				<div class="text-white align-items-center" id="todo">
 					<div id="todo-error"></div>
 					<form class="d-flex justify-content-center" onsubmit="app.controllers.todoController.addTodo(event)">
 						<input class="my-2" type="text" name="taskName" placeholder="type task here"></input>
 						<button class="my-2" type="submit" value="Submit">Create Task</button>
 					</form>
+					<hr>
 					<div id="todos"></div>
 				</div>
 			</div>
@@ -61,12 +61,12 @@
 			$('#toggleTasks').click(function () {
 				if (displayed == false) {
 					$("#taskWindow").animate({ height: "60vh" }, { queue: false, duration: 500 });
-					$("#toggleTasks").html('<h3 class="text-white text-center"><i class="fas fa-angle-double-down"></i> Hide <i class="fas fa-angle-double-down"></i></h3>')
+					$("#toggleTasks").html('<h3 class="text-white text-center"><i class="fas fa-angle-double-down"></i> Hide <i class="fas fa-angle-double-down"></i></h3><hr>')
 					displayed = true;
 				}
 				else {
 					$("#taskWindow").animate({ height: "6vh" }, { queue: false, duration: 500 })
-					$("#toggleTasks").html('<h3 class="text-white text-center"><i class="fas fa-angle-double-up"></i> View Tasks <i class="fas fa-angle-double-up"></i></h3>')
+					$("#toggleTasks").html('<h3 class="text-white text-center"><i class="fas fa-angle-double-up"></i> View Tasks <i class="fas fa-angle-double-up"></i></h3><hr>')
 					displayed = false;
 				}
 			})

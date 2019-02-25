@@ -9,8 +9,8 @@ function _drawTodos() {
 		template += d.getTemplate()
 	})
 	document.getElementById('todos').innerHTML = template
+	document.getElementById('taskCount').innerText = `You have ${data.length.toString()} tasks left.`
 }
-
 function _drawError() {
 	console.error('[TODO ERROR]', _todoService.TodoError)
 	//document.querySelector('#todo-error').textContent = `${_todoService.TodoError.message}`

@@ -7,15 +7,17 @@ export default class ToDo {
   }
 
   getTemplate() {
-    return `<div class="col-12 card text-dark my-2 rounded bg-light d-flex justify-content-center flex-row" id="taskCard"> 
-    <div class="col-6 d-flex justify-content-center align-items-center">
-      <input class="form-check-input position-static" type="checkbox" value="option1" onclick="app.controllers.todoController.toggleTodoStatus('${this.id}')">
-    <div class="card-text"><p>${this.task}</p></div>
+    return `<div class="col-12 text-dark rounded h-100 d-flex justify-content-center flex-row mt-1" id="taskCard"> 
+    <div class="col-1 pb-2 offset-1 d-flex align-items-center">
+      <input class="form-check-input" type="checkbox" value="option1" onclick="app.controllers.todoController.toggleTodoStatus('${this.id}')">
+      </input></div>
+    <div class="col-6 d-flex align-items-center">
+    <div class="text-white" id="taskText">${this.task}</div>
     </div>
-    <div class="col-6 d-flex justify-content-center">
-    <button class= "btn btn-dark" onclick="app.controllers.todoController.removeTodo('${this.id}')">delete task</button>
+    <div class="col-5">
+    <button class= "btn btn-secondary" onclick="app.controllers.todoController.removeTodo('${this.id}')">delete</button>
     </div>
-    </div >
+    </div><hr>
       `
   }
 }

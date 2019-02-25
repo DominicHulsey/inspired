@@ -7,8 +7,10 @@ export default class Weather {
     // data.main.temp is the temperature in Kelvin
     // You should probably convert the temperature data to either F or C
     this.city = data.name
+    this.kelvin = data.main.temp
     this.temperature = ((9 / 5) * (data.main.temp - 273) + 32).toFixed(0)
     this.hourImg = hour()
+    this.units = [this.kelvin, this.temperature]
 
     function hour() {
       let d = new Date
@@ -24,12 +26,14 @@ export default class Weather {
       }
     }
   }
+
+  tempUnits() {
+
+  }
   getTemplate() {
     return `
-    <div class="col-3">
-<h3 class="quote" id="back">${this.city}<hr> ${this.temperature}°</h3></div>
-<div class="col-9">
-<img class="weatherLogo" src="${this.hourImg}" /></div>
+<h1 class="quote">${this.city}</h1>
+<h1 class="quote" id="temp" onclick="document.getElementById('temp').innerText = ${this.units[0].toFixed()}">${this.temperature}°F</h1>
 `
   }
 

@@ -80,6 +80,7 @@ export default class TodoService {
 	addTime() {
 		let time1 = new Date
 		let time2 = new Date
+		let time3 = new Date
 		let hour = time1.getHours()
 		let minutes = time2.getMinutes()
 		let meridian = []
