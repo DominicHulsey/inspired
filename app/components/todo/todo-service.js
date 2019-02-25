@@ -54,7 +54,7 @@ export default class TodoService {
 				let nameArr = res.data.data[0].user.split('')
 				nameArr[0] = nameArr[0].toUpperCase()
 				let name = nameArr.join('')
-				document.getElementById('name').innerText = `Hi ${name}`
+				document.getElementById('name').innerText = `Good ${_state.todos[0].time.toString()} ${name.toString()},`
 			})
 			.catch(err => _setState('error', err.response.data))
 	}
@@ -80,7 +80,6 @@ export default class TodoService {
 	addTime() {
 		let time1 = new Date
 		let time2 = new Date
-		let time3 = new Date
 		let hour = time1.getHours()
 		let minutes = time2.getMinutes()
 		let meridian = []

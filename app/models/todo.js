@@ -4,7 +4,28 @@ export default class ToDo {
     this.user = data.user
     this.status = data.completed
     this.id = data._id
+    this.time = hour()
+
+
+
+    function hour() {
+      let d = new Date
+      let hour = d.getHours()
+      if (hour <= 6 && hour >= 21) {
+        return `night`
+      }
+      else if (hour <= 12) {
+        return `morning`
+      }
+      else if (hour > 12 && hour < 18) {
+        return `afternoon`
+      }
+      else if (hour > 18 && hour < 21) {
+        return `evening`
+      }
+    }
   }
+
 
   getTemplate() {
     return `<div class="col-12 text-dark rounded h-100 d-flex justify-content-center flex-row mt-1" id="taskCard"> 

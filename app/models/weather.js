@@ -9,22 +9,9 @@ export default class Weather {
     this.city = data.name
     this.kelvin = data.main.temp
     this.temperature = ((9 / 5) * (data.main.temp - 273) + 32).toFixed(0)
-    this.hourImg = hour()
     this.units = [this.kelvin, this.temperature]
 
-    function hour() {
-      let d = new Date
-      let hour = d.getHours()
-      if (hour <= 8 || hour >= 20) {
-        return `assets/moon.png`
-      }
-      else if (hour <= 16) {
-        return `assets/sun.png`
-      }
-      else if (hour > 16 || hour < 20) {
-        return `assets/sunSet.png`
-      }
-    }
+
   }
 
   tempUnits() {
