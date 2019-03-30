@@ -36,7 +36,7 @@ export default class ToDo {
     <div class="text-white" id="taskText">${this.task}</div>
     </div>
     <div class="col-5">
-    <button class= "btn btn-secondary" onclick="app.controllers.todoController.removeTodo('${this.id}')">delete</button>
+    <button class= "btn btn-secondary" onclick="app.controllers.todoController.removeTodo('${this.id}')"><i class="fas fa-trash-alt"></i></button>
     </div>
     </div><hr>
       `

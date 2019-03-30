@@ -22,7 +22,7 @@ color: grey;
 }
 
 .text-center.text-white {
-  transition:all 0.3s linear;
+  transition:all 0.1s linear;
   color: white;
 }
 
@@ -56,6 +56,10 @@ body{
   font-size: 15vh
 }
 
+#timeBox {
+  min-width: 500px;
+}
+
 .mainText {
   font-size: 10vh
 }
@@ -77,6 +81,8 @@ body{
 
 #taskWindow {
   height:60vh;
+  max-width: 50vw;
+  min-width: 650px;
 }
 #hide {
   border-bottom: 2px solid #525c67;

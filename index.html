@@ -24,13 +24,13 @@
 		</div>
 		<div class="row h-100 align-items-center" id="margin">
 			<div
-				class="col-4 h-auto w-auto border rounded main offset-4 d-flex flex-column justify-content-center align-items-center shadow">
+				class="col-4 h-auto w-auto border rounded main offset-4 d-flex flex-column justify-content-center align-items-center shadow" id="timeBox">
 				<h1 class="text-white quote text-center h-25" id="time"></h1>
 				<h1 class="text-white quote text-center h-25" id="name"></h1>
 				<h1 class="text-white quote text-center h-25" id="taskCount"></h1>
 			</div>
 		</div>
-		<d0p-;'iv class="row fixed-bottom offset-8 w-75" id="taskWindow">
+		<div class="row fixed-bottom offset-8 w-75" id="taskWindow">
 			<div class="col-4  bg-dark rounded py-2 w-100 ">
 				<div class="align-items-center tasks" id="toggleTasks">
 					<h3 class="text-center text-white" id="taskText"><i class="fas fa-angle-double-up"></i> View Tasks <i
@@ -54,7 +54,7 @@
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.velocity/0.11.9/jquery.velocity.min.js"></script>
 	<script> $(document).ready(function () {
-			$('#taskWindow').height('6vh')
+			$('#taskWindow').height('5vh')
 			let displayed = false;
 			$('#toggleTasks').click(function () {
 				if (displayed == false) {
@@ -63,7 +63,7 @@
 					displayed = true;
 				}
 				else {
-					$("#taskWindow").animate({ height: "6vh" }, { queue: false, duration: 500 })
+					$("#taskWindow").animate({ height: "5vh" }, { queue: false, duration: 500 })
 					$("#toggleTasks").html('<h3 class="text-center text-white" id="taskText"><i class="fas fa-angle-double-up"></i> View Tasks <i class="fas fa-angle-double-up"></i></h3><hr>')
 					displayed = false;
 				}
