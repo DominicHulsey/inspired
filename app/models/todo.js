@@ -28,7 +28,7 @@ export default class ToDo {
 
 
   getTemplate() {
-    return `<div class="col-12 text-dark rounded h-100 d-flex justify-content-center flex-row mt-1" id="taskCard"> 
+    return `<div class="col-12 rounded h-100 d-flex justify-content-center flex-row mt-1" id="taskCard"> 
     <div class="col-1 pb-2 offset-1 d-flex align-items-center">
       <input class="form-check-input" type="checkbox" value="option1" onclick="app.controllers.todoController.toggleTodoStatus('${this.id}')">
       </input></div>

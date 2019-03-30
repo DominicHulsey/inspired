@@ -13,8 +13,24 @@ hr {
 }
 
 .main {
-  position: absolute
-  
+  position: absolute 
+}
+
+.tasks:hover {
+cursor: pointer;
+color: grey;
+}
+
+.text-center.text-white {
+  transition:all 0.3s linear;
+  color: white;
+}
+
+h3.text-center.text-white#taskText:hover{
+  color:grey !important;
+}
+#taskText:hover {
+  color:grey !important;
 }
 
 .complete {
@@ -26,9 +42,14 @@ body{
   min-height:100vh;
   width: auto;
   background-position: center;
+  color:white !important;
 }
 #taskCard {
   transition:all 0.2s linear;
+}
+
+#toggleTasks {
+  color: white;
 }
 
 #time {
