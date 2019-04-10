@@ -12,57 +12,59 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="container-fluid h-100" id="bg-image">
-		<div class="row mt-3">
-			<div class="col-2 h-100 d-flex">
-				<div class="text-white quote card bg-transparent h-100" id="weather" style="border:none">
-				</div>
-			</div>
-			<div class="text-white col-8 quote text-center" id="quote">
-			</div>
-		</div>
-		<div class="row h-100 align-items-center" id="margin">
-			<div
-				class="col-4 h-auto w-auto border rounded main offset-4 d-flex flex-column justify-content-center align-items-center shadow" id="timeBox">
-				<h1 class="text-white quote text-center h-25" id="time"></h1>
-				<h1 class="text-white quote text-center h-25" id="name"></h1>
-				<h1 class="text-white quote text-center h-25" id="taskCount"></h1>
-			</div>
-		</div>
-		<div class="row fixed-bottom offset-8 w-75" id="taskWindow">
-			<div class="col-4  bg-dark rounded py-2 w-100 ">
-				<div class="align-items-center tasks" id="toggleTasks">
-					<h3 class="text-center text-white" id="taskText"><i class="fas fa-angle-double-up"></i> View Tasks <i
-							class="fas fa-angle-double-up"></i></h3>
-				</div>
 
-				<!--FORM-->
-				<div class="text-white align-items-center" id="todo">
-					<div id="todo-error"></div>
-					<form class="d-flex justify-content-center" onsubmit="app.controllers.todoController.addTodo(event)">
-						<input class="my-2  form-control w-75 mx-1" type="text" name="taskName" placeholder="type task here"></input>
-						<button class="my-2 btn btn-info w-25 mx-1" type="submit" value="Submit">Create</button>
-					</form>
-					<hr>
-					<div id="todos"></div>
-				</div>
+<body class="container-fluid h-100" id="bg-image">
+	<div class="row mt-3">
+		<div class="col-2 h-100 d-flex">
+			<div class="text-white quote card bg-transparent h-100" id="weather" style="border:none">
 			</div>
 		</div>
-	
+		<div class="text-white col-8 quote text-center" id="quote">
+		</div>
+	</div>
+	<div class="row h-100 align-items-center" id="margin">
+		<div
+			class="col-4 h-auto w-auto border rounded main offset-4 d-flex flex-column justify-content-center align-items-center shadow"
+			id="timeBox">
+			<h1 class="text-white quote text-center h-25" id="time"></h1>
+			<h1 class="text-white quote text-center h-25" id="name"></h1>
+			<h1 class="text-white quote text-center h-25" id="taskCount"></h1>
+		</div>
+	</div>
+	<div class="row fixed-bottom offset-8" id="taskWindow">
+		<div class="col-6  bg-dark rounded py-2 w-100 ">
+			<div class="align-items-center tasks" id="toggleTasks">
+				<h3 class="text-center text-white" id="taskText"><i class="fas fa-angle-double-up"></i> View Tasks <i
+						class="fas fa-angle-double-up"></i></h3>
+			</div>
+
+			<!--FORM-->
+			<div class="text-white align-items-center" id="todo">
+				<div id="todo-error"></div>
+				<form class="d-flex justify-content-center" onsubmit="app.controllers.todoController.addTodo(event)">
+					<input class="my-2  form-control w-75 mx-1" type="text" name="taskName" placeholder="type task here"></input>
+					<button class="my-2 btn btn-info w-25 mx-1" type="submit" value="Submit">Create</button>
+				</form>
+				<hr>
+				<div id="todos"></div>
+			</div>
+		</div>
+	</div>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.velocity/0.11.9/jquery.velocity.min.js"></script>
 	<script> $(document).ready(function () {
-			$('#taskWindow').height('5vh')
+			$('#taskWindow').height('7vh')
 			let displayed = false;
 			$('#toggleTasks').click(function () {
 				if (displayed == false) {
-					$("#taskWindow").animate({ height: "40vh" }, { queue: false, duration: 500 });
+					$("#taskWindow").animate({ height: "60vh" }, { queue: false, duration: 500 });
 					$("#toggleTasks").html('<h3 class="text-center text-white" id="taskText"><i class="fas fa-angle-double-down"></i> Hide <i class="fas fa-angle-double-down"></i></h3><hr>')
 					displayed = true;
 				}
 				else {
-					$("#taskWindow").animate({ height: "5vh" }, { queue: false, duration: 500 })
+					$("#taskWindow").animate({ height: "7vh" }, { queue: false, duration: 500 })
 					$("#toggleTasks").html('<h3 class="text-center text-white" id="taskText"><i class="fas fa-angle-double-up"></i> View Tasks <i class="fas fa-angle-double-up"></i></h3><hr>')
 					displayed = false;
 				}
